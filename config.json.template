@@ -1,0 +1,15 @@
+{
+    "url": "http://localhost/",
+    "cookie": null,
+    "basicauth": null,
+    "tests": [
+             { "concurrency": 1,   "requests": 10   },
+             { "concurrency": 2,   "requests": 20   },
+             { "concurrency": 4,   "requests": 40   },
+             { "concurrency": 8,   "requests": 80   },
+             { "concurrency": 16,  "requests": 160  },
+             { "concurrency": 32,  "requests": 320  },
+             { "concurrency": 64,  "requests": 640  },
+             { "concurrency": 128, "requests": 1280 }
+    ]
+}
