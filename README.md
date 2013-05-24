@@ -13,6 +13,7 @@ from a CDN instead of copying them into this project - send me a PR :P).
 This is a quick and dirty project but should be pretty handy nonetheless.
 Hopefully you will be able to defer using JMeter for a while longer with this. It's also prettier than JMeter.
 
+![Screenshot](raw.github.com/gomox/benchy/master/screenshots/benchy_multiple.png)
 
 How to install Benchy
 ---------------------
@@ -80,9 +81,7 @@ to check the results:
 I can now fire up my web browser and go find that very `index.html`, it should look
 like this:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Screenshot
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+![Screenshot](raw.github.com/gomox/benchy/master/screenshots/benchy_single.png)
 
 Now, I will tweak my code and configuration to see if I can squeeze more performance
 out of that stupid `mypage` site. Say I notice the code is using `Zend_Json::encode()` instead
@@ -104,9 +103,8 @@ I will now regenerate the report to see if I have achieved something:
     
     $ php index.php > index.html
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Screenshot
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+![Screenshot](raw.github.com/gomox/benchy/master/screenshots/benchy_multiple.png)
 
 Tada :) Just click on the checkboxes to compare the datasets you have, or
 look at different metrics. Enjoy!
