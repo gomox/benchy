@@ -33,7 +33,7 @@ class ApacheBenchRunner {
     }
 
     private function checkApacheBench() {
-        exec(AB_EXECUTABLE . " -V", &$output, &$return_var);
+        exec(AB_EXECUTABLE . " -V", $output, $return_var);
         if ($return_var != 0) {
             throw new Exception("Could not execute ApacheBench! (used \"" .AB_EXECUTABLE. "\" as command)");
         }
