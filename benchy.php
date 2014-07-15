@@ -134,7 +134,9 @@ class ApacheBenchResult {
 
         foreach($expressions as $key => $regex) {
             preg_match_all($regex, $cmd_output, $matches);
-            $this->results[$key] = cast($matches[1][0], $types[$key]);
+            if (isset($matches[1][0])) {
+                $this->results[$key] = cast($matches[1][0], $types[$key]);
+            }
         }
     }
 
