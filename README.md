@@ -22,7 +22,7 @@ Dependencies (doh):
 
  * `php`
  * `apachebench`
- * a web server (`python -m SimpleHTTPServer` will do!)
+ * a web server (now, PHP 5.4 has a [built-in webserver](http://php.net/manual/en/features.commandline.webserver.php). You can call it from the command line using `php -S 0.0.0.0:8000 -t .`)
  * a web browser
 
 Installation steps:
@@ -30,7 +30,6 @@ Installation steps:
  * Just copy the Benchy folder somewhere within your `DOCUMENT_ROOT` or equivalent (see Note below on why the webserver is necessary)
  * If you have a working webserver **with PHP**, put Benchy within it if you
    can. Either way, see the usage instructions below.
-
 
 How to use Benchy
 -----------------
