@@ -33,7 +33,7 @@ class ApacheBenchRunner {
     }
 
     private function checkApacheBench() {
-        exec(AB_EXECUTABLE . " -V", &$output, &$return_var);
+        exec(AB_EXECUTABLE . " -V", $output, $return_var);
         if ($return_var != 0) {
             throw new Exception("Could not execute ApacheBench! (used \"" .AB_EXECUTABLE. "\" as command)");
         }
@@ -134,7 +134,9 @@ class ApacheBenchResult {
 
         foreach($expressions as $key => $regex) {
             preg_match_all($regex, $cmd_output, $matches);
-            $this->results[$key] = cast($matches[1][0], $types[$key]);
+            if (isset($matches[1][0])) {
+                $this->results[$key] = cast($matches[1][0], $types[$key]);
+            }
         }
     }
 
